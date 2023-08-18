@@ -1,15 +1,15 @@
-// Elementi forme
+
 const computerForm = document.getElementById('computerForm');
 const activityForm = document.getElementById('activityForm');
 const chartsContainer = document.getElementById('charts');
 const computerTable = document.getElementById('computerTable');
 const activityTable = document.getElementById('activityTable');
 
-// Podaci o računalima i aktivnostima
+
 let computers = [];
 let activities = [];
 
-// Dodajte slušatelje događaja na forme
+
 
 computerForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -48,12 +48,12 @@ activityForm.addEventListener('submit', (event) => {
     displayData();
 });
 
-// Funkcija za prikaz podataka u tablici
-function displayData() {
-    computerTable.innerHTML = ''; // Prazni prethodni sadržaj tablice za računala
-    activityTable.innerHTML = ''; // Prazni prethodni sadržaj tablice za aktivnosti
 
-    // Kreiraj zaglavlje tablice za računala
+function displayData() {
+    computerTable.innerHTML = ''; 
+    activityTable.innerHTML = ''; 
+
+    
     const computerHeaderRow = document.createElement('tr');
     computerHeaderRow.innerHTML = `
         <th>Vrsta Računala</th>
@@ -67,7 +67,7 @@ function displayData() {
     `;
     computerTable.appendChild(computerHeaderRow);
 
-    // Kreiraj redak za svako računalo
+    
     computers.forEach(computer => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -83,7 +83,7 @@ function displayData() {
         computerTable.appendChild(row);
     });
 
-    // Kreiraj zaglavlje tablice za aktivnosti
+
     const activityHeaderRow = document.createElement('tr');
     activityHeaderRow.innerHTML = `
         <th>Aktivnost</th>
@@ -92,7 +92,7 @@ function displayData() {
     `;
     activityTable.appendChild(activityHeaderRow);
 
-    // Kreiraj redak za svaku aktivnost
+    
     activities.forEach(activity => {
         const row = document.createElement('tr');
         row.innerHTML = `
