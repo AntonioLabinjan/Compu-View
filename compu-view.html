@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPU-VIEW</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>COMPU-VIEW</h1>
+    
+    <!-- Forma za unos informacija o računalima -->
+    <form id="computerForm">
+        <label for="computerType">Vrsta Računala:</label>
+        <input type="text" id="computerType" required>
+        <label for="computerModel">Model:</label>
+        <input type="text" id="computerModel" required>
+        <label for="manufacturingYear">Godina Proizvodnje:</label>
+        <input type="number" id="manufacturingYear" required>
+        <label for="romMemory">ROM Memorija:</label>
+        <input type="text" id="romMemory" required>
+        <label for="ramMemory">RAM Memorija:</label>
+        <input type="text" id="ramMemory" required>
+        <label for="operatingSystem">Operativni Sustav:</label>
+        <input type="text" id="operatingSystem" required>
+        <label for="graphicsCard">Grafička Kartica:</label>
+        <input type="text" id="graphicsCard" required>
+        <label for="processor">Procesor:</label>
+        <input type="text" id="processor" required>
+        <!-- Dodajte ostale ulazne elemente za unos -->
+       <center> <button type="submit">Spremi</button> </center>
+    </form>
+
+    <form id="activityForm">
+        <label for="activityName">Aktivnost:</label>
+        <input type="text" id="activityName" required>
+        <label for="activityDuration">Trajanje (h):</label>
+        <input type="number" step="0.01" id="activityDuration" required>
+        <label for="activityComputer">Računalo (model): </label>
+        <input type="text" id="activityComputer" required>
+        <center><button type="submit">Dodaj Aktivnost</button></center>
+    </form>
+    
+    <!-- Tablica za prikaz podataka o aktivnostima -->
+    <table id="activityTable">
+        <thead>
+            <tr>
+                <th>Aktivnost</th>
+                <th>Trajanje (h)</th>
+                <th>Računalo(model)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ovdje će se generirati redci sa podacima -->
+        </tbody>
+    </table>
+
+    <!-- Tablica za prikaz podataka o računalima -->
+    <table id="computerTable">
+        <thead>
+            <tr>
+                <th>Vrsta Računala</th>
+                <th>Model</th>
+                <th>Godina Proizvodnje</th>
+                <th>ROM Memorija</th>
+                <th>RAM Memorija</th>
+                <th>Operativni Sustav</th>
+                <th>Grafička Kartica</th>
+                <th>Procesor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ovdje će se generirati redci sa podacima -->
+        </tbody>
+    </table>
+
+
+    <script src="compu-view.js"></script>
+	
+
+</body>
+</html>
